@@ -1,1 +1,1 @@
-# advertisement
+# 静态宣传界面

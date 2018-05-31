@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_671146_qskm28p6uzzg2e29.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_673340_qfo38t6kj8y6i529.css">
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .clearfix {
+            content: "";
+            display: inline-block;
+            clear: both;
+        }
+        header {
+            color: white;     
+            height: 757px;
+            background: no-repeat url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg);
+            text-align: center;
+            overflow: hidden;
+        }
+        .start {
+            float: left;
+            color: #fed235;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 19px;
+            margin: 0;
+        }
+        ul {
+            float: right;
+            list-style: none;
+        }
+        li {
+            float: left;
+        }
+        li>a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+        }
+        header>h2 {
+            margin-top: 300px;
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 70px;
+            line-height: 1;
+            margin-top: 40px;
+        }
+        button {
+            display: inline-block;
+            height: 70px;
+            background: #fed235;
+            font-size: 20px;
+            border-radius: 3px;
+            color: white;
+        }
+        li>a:hover {
+            color: #fed235;
+        }
+        .caption {
+            font-size: 40px;
+            font-family: sans-serif;
+            margin-top: 100px;
+            font-weight: bold;
+        }
+        .pic {
+            margin: 80px auto; 
+            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+            background: #fed235;
+            font-size: 80px;
+            color: white;
+            border-radius: 50px;
+        }
+        .middle::after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .iconi {
+            font-weight: bolder;
+            margin: 30px;
+        }
+        p {
+            margin: 10px 40px;
+        }
+        session {
+            min-width: 100px;
+            padding: 1px;
+           
+        }
+        
+        dl {
+            text-align: center;
+            display: inline-block;
+            margin: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: solid grey 1px;
+            box-shadow: 3px 3px 5px 2px grey;
+        }
+        .intro {
+            margin-bottom: 80px;
+        }
+        dd {
+            margin: 20px;
+            font-size: 20px;
+        }
+    
+        img {
+            vertical-align: bottom;
+        }
+        dd:nth-of-type(odd) {
+            font-weight: bold;
+            margin-bottom: -20px;
+        }
+        dt {
+            height: 289px;
+            position: relative;
+        }
+        dt>a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(254, 209, 54, .9);
+            transition: .5s;
+            opacity: 0;
+        }
+        dt>a:hover::before {
+            opacity: 1;
+        }
+        dt>a:hover::after {
+            content: '+';
+            font-size: 100px;
+            font-weight: bold;
+            position: absolute;
+            top: 72px;
+            left: 170px;
+        }
+        .brand>a:hover {
+           color:rgba(254, 209, 54, .9);
+           transition: 0.5s;
+        }
+        
+        
+        
+        @media screen and (min-width: 500px) {
+        .main_about:nth-child(odd)>img {
+            float: right;
+            
+            width: 160px;
+            border: 5px solid rgba(220,220,220);
+            border-radius: 100px;
+            
+            margin-right: calc(50% - 80px); 
+        }
+        .main_about:nth-child(even)>img {
+            float: left;
+            
+            width: 160px;
+            border: 5px solid rgba(220,220,220);
+            border-radius: 100px;
+            
+            margin-left: calc(50% - 80px); 
+        }
+        .main_about:nth-child(odd)>.line {
+            float: right;
+            width: 4px;
+            height: 200px;
+            background: rgba(220,220,220);
+            margin-right: 50%;
+              
+        }
+        .main_about:nth-child(even)>.line {
+            float: left;
+            width: 4px;
+            height: 200px;
+            background: rgba(220,220,220);
+            margin-left: 50%;
+              
+        }
+        
+        .main_about:nth-child(odd)>div.article {
+            margin-right: calc(50% + 100px);
+            text-align: right;
+            min-width: 210px;
+        }
+        .main_about:nth-child(even)>div.article {
+            margin-left: calc(50% + 100px);
+            text-align: left;
+            min-width: 210px;
+        }
+        .introduce {
+            margin: 0;
+        }
+        }
+        @media screen and (max-width: 500px) {
+            .main_about>img {
+            float: left;
+            margin: 0;
+            width: 80px;
+            border: 5px solid rgba(220,220,220);
+            border-radius: 40px;
+        }
+        .main_about>div.article {
+            text-align: left;
+            min-width: 100px;
+            margin-left: 44px;
+            padding-left: 46px;
+            border-left: 3px solid rgba(220,220,220);
+        }
+        .introduce {
+            margin: 0;
+        }
+ 
+        }
+        span.iconfont {
+            font-size: 40px;
+        }
+        .photo>img {
+            border-radius: 120px;
+        }
+        .photo {
+            width: 250px; 
+        }
+        .person {
+           display: inline-block;
+            margin: 20px;
+        }
+        session {
+            display: block;
+        }
+        session:nth-child(odd) {
+            background:  rgba(220,220,220,.7);
+        }
+        .brand>a {
+            color:black;
+        }
+        .brand {
+            position: relative;
+        }
+        .brand>a:hover::afters {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(254, 209, 54, .9);
+        }
+        .endintro {
+            margin: 100px 20%;
+        }
+        .bigbrand>img {
+            padding: 50px 0px;
+            background: white;
+        }
+        .bigbrand {
+            background: white;
+        }
+        input {
+            display: block;
+            width: 600px;
+            height: 50px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+        #contactus {
+            display: block;
+            background: no-repeat center black url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/map-image.png) ;
+            
+        }
+        #contactus>.caption {
+            color: white;
+        }
+        #contactus>.intro {
+            color: grey;
+        }
+        div.input {
+            display: inline-block;
+            font-size: 40px;
+        }
+        .input>input::-webkit-input-placeholder{
+            color: grey;
+            font-size: 20px;
+            font-weight: bold;
+            opacity: 0.5;
+        }
+        textarea::-webkit-input-placeholder{
+            color: grey;
+            font-size: 20px;
+            font-weight: bold;
+            opacity: 0.5;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        textarea {
+            vertical-align: bottom;
+            margin-bottom: 20px;
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 600px;
+            
+        }
+        ::selection {
+            background: #fed235;
+        }
+        .footer {
+            background: white;
+        }
+        .pp>a {
+            color: #fed334; 
+            margin: 0 20px;
+        }
+        .pp>a:hover {
+            text-decoration: underline;
+        }
+        .footer>div {
+            display: inline-block;
+            width: 300px;
+        }
+        .icon-twitter:before {
+            font-size: 44px;
+        }
+        .icon-linkedin0:before {
+            font-size: 42px;
+        }
+        input,
+        textarea {
+            font-size: 20px;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <p class="start">Start project</p>
+        <ul>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">TEAM</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <h2>WELCOME TO OUR STUDIO!</h2>
+        <h1>IT IS NICE TO MEET YOU</h1>
+        <button><a href="#">TELL ME MORE</a></button>
+    </header>
+    <session class="service">
+        <div class="caption">
+            SERVICES
+        </div>
+        <div class="intro">
+             Lorem ipsum dolor sit amet consectetur.
+        </div>
+        <div class="imginfor">
+        <div class="iconfont icon-gouwuche pic middle"></div>
+        <p class="iconi">E-Commerce</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div>
+        <div class="imginfor">
+        <div class="iconfont icon-diannao pic middle"></div>
+        <p class="iconi">Responsive Design</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div>
+        <div class="imginfor">
+        <div class="iconfont icon-suo pic middle"></div>
+        <p class="iconi">E-Commerce</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div>
+    </session>              
+    <session class="portfolio clearfix">
+        <div class="caption">
+            PORTFOLIO
+        </div>
+        <div class="intro">
+            orem ipsum dolor sit amet consectetur.
+        </div>
+        <div class="mainpic clearfix">
+        <dl>
+            <dt><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png" alt="#"></a></dt>
+            <dd>Round Icons</dd>
+            <dd>Graphic Design</dd>
+        </dl>
+        <dl>
+            <dt><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png" alt="#"></a></dt>
+            <dd>Round Icons</dd>
+            <dd>Graphic Design</dd>
+        </dl>
+        <dl>
+            <dt><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png" alt="#"></a></dt>
+            <dd>Round Icons</dd>
+            <dd>Graphic Design</dd>
+        </dl>
+        <dl>
+            <dt><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png" alt="#"></a></dt>
+            <dd>Round Icons</dd>
+            <dd>Graphic Design</dd>
+        </dl>
+        <dl>
+            <dt><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png" alt="#"></a></dt>
+            <dd>Round Icons</dd>
+            <dd>Graphic Design</dd>
+        </dl>
+        <dl>
+            <dt><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png" alt="#"></a></dt>
+            <dd>Round Icons</dd>
+            <dd>Graphic Design</dd>
+        </dl>
+        </div>
+    </session>
+    <session>
+            <div class="caption">
+                    PORTFOLIO
+                </div>
+                <div class="intro">
+                    orem ipsum dolor sit amet consectetur.
+                </div>
+    
+            <div class="main">
+                <div class="main_about clearfix">
+                    <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/1.jpg" alt="#">
+                    <div class="line"></div>
+                <div class="article">
+                    <h2 class="time">
+                        2009-2011 <br> Our Humble Beginnings
+                    </h2>
+                    <p class="introduce">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!    
+                    </p>
+                </div>  
+                
+                </div>
+             <div class="main_about clearfix">
+                <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/1.jpg" alt="#">
+                <div class="line"></div>
+                <div class="article">
+                    <h2 class="time">
+                     2009-2011 <br> Our Humble Beginnings
+                    </h2>
+                    <p class="introduce clearfix">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!    
+                    </p>
+                </div>  
+          
+             </div>
+             <div class="main_about clearfix">
+                <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/1.jpg" alt="#">
+                <div class="line"></div>
+                <div class="article">
+                    <h2 class="time">
+                     2009-2011 <br> Our Humble Beginnings
+                    </h2>
+                    <p class="introduce clearfix">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!    
+                    </p>
+                </div>  
+          
+             </div>
+             <div class="main_about clearfix">
+                <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/1.jpg" alt="#">
+                <div class="line"></div>
+                <div class="article">
+                    <h2 class="time">
+                     2009-2011 <br> Our Humble Beginnings
+                    </h2>
+                    <p class="introduce">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!    
+                    </p>
+                </div>  
+          
+             </div>
+             <div class="main_about clearfix">
+                <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/1.jpg" alt="#">
+                <div class="line"></div>
+                <div class="article">
+                    <h2 class="time">
+                     2009-2011 <br> Our Humble Beginnings
+                    </h2>
+                    <p class="introduce">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!    
+                    </p>
+                </div>  
+                <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/1.jpg" alt="#">
+             </div>
+             </div>
+        </session>
+        <session>
+        <div class="caption">
+            OUR AMAZING TEAM
+        </div>
+        <div class="intro">
+            orem ipsum dolor sit amet consectetur.
+        </div> 
+        <div class="person">  
+        <div class="photo">
+            <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/team/5.jpg" alt="#">
+        </div>
+        <div class="family">
+            Kay Garland
+        </div>
+        <div class="name">
+            Lead Designer
+        </div>
+        <div class="brand">
+            <a href="#"><span class="iconfont icon-twitter"></span> </a>
+            <a href="#"><span class="iconfont icon-linkedin0"></span></a>
+            <a href="#"><span class="iconfont icon-facebookfacebook52"></span></a>
+        </div>
+        </div>
+        <div class="person">   
+        <div class="photo">
+            <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/team/5.jpg" alt="#">
+        </div>
+        <div class="family">
+            Kay Garland
+        </div>
+        <div class="name">
+            Lead Designer
+        </div>
+        <div class="brand">
+            <a href="#"><span class="iconfont icon-twitter"></span> </a>
+            <a href="#"><span class="iconfont icon-linkedin0"></span></a>
+            <a href="#"><span class="iconfont icon-facebookfacebook52"></span></a>
+        </div>
+        </div>
+        <div class="person">   
+        <div class="photo">
+            <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/team/5.jpg" alt="#">
+        </div>
+        <div class="family">
+            Kay Garland
+        </div>
+        <div class="name">
+            Lead Designer
+        </div>
+        <div class="brand">
+            <a href="#"><span class="iconfont icon-twitter"></span></a>
+            <a href="#"><span class="iconfont icon-linkedin0"></span></a>
+            <a href="#"><span class="iconfont icon-facebookfacebook52"></span></a>
+        </div>
+        </div>
+        <div class="endintro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</div>
+    </session>  
+    <session class="contact">
+        <div class="bigbrand">
+            <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg" alt="#">
+            <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg" alt="#">
+            <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg" alt="#">
+            <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg" alt="#">
+        </div>
+    </session>
+    <session id="contactus">
+        <div class="caption">
+            CONTACT US
+        </div>
+        <div class="intro">
+            orem ipsum dolor sit amet consectetur.
+        </div>  
+        <div class="input">
+        <input type="text" placeholder="YOUR NAME *">
+        <input type="text" placeholder="YOUR EMAIL *">
+        <input type="text" placeholder="YOUR PHONE *">
+        </div>
+        <textarea cols="80" rows="15" placeholder="YOUR MESSAGE *"></textarea><br>
+        <button>SEND  MESSAGE</button>
+        <div class="footer">
+            <div class="cpr">Copyright © Your Website 2014</div>
+            <div class="logo">
+                <span class="iconfont icon-twitter"></span>
+                <span class="iconfont icon-linkedin0"></span>
+                <span class="iconfont icon-facebookfacebook52"></span>
+            </div>
+            <div class="pp"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+        </div>
+    </session>
+</body>
+</html>
